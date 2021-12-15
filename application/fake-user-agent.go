@@ -92,3 +92,54 @@ func (f *FakeUserAgent) IE() string {
 func (f *FakeUserAgent) InternetExplorer() string {
 	return f.IE()
 }
+
+func (f *FakeUserAgent) Mise() string {
+	return f.IE()
+}
+
+func (f *FakeUserAgent) Chrome() string {
+	return f.common("Chrome")
+}
+
+func (f *FakeUserAgent) Google() string {
+	return f.Chrome()
+}
+
+// Opera UserAgent
+func (f *FakeUserAgent) Opera() string {
+
+	return f.common("Opera")
+}
+
+// Safari UserAgent
+func (f *FakeUserAgent) Safari() string {
+
+	return f.common("Safari")
+}
+
+// FireFox UserAgent
+func (f *FakeUserAgent) FireFox() string {
+
+	return f.common("Firefox")
+}
+
+// FF UserAgent
+func (f *FakeUserAgent) FF() string {
+	return f.FireFox()
+}
+
+func (f *FakeUserAgent) Random() string {
+	randomChoice := []string {
+		"Chrome",
+		"Firefox",
+		"Safari",
+		"Opera",
+		"Internet+Explorer",
+	}
+
+	r := rand.NewSource(time.Now().UnixNano())
+	random := rand.New(r)
+	var browserType string
+	browserType = randomChoice[random.Intn(len(randomChoice))]
+	return f.common(browserType)
+}
