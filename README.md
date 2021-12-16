@@ -51,5 +51,8 @@ Mozilla/4.0 (compatible; MSIE 5.0; Windows 98) Opera 6.04  [pl]
 #### 3.2 Param
 - UserAgentStringOk: http://useragentstring.com/
 - CacheOk : Random 50 UserAgent
+
+Reference：[Python fake-useragent](https://github.com/hellysmile/fake-useragent)
+
 ### License
 MIT ©[Lixvyang](LICENSE)
